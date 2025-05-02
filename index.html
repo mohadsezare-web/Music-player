@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen pb-24">
+        <!-- Sidebar -->
+        <div class="sidebar w-64 p-4 hidden md:block">
+            <div class="mb-8">
+                <h2 class="text-xl font-bold mb-4 neon-text">Categories</h2>
+                <ul class="space-y-2">
+                    <li class="hover:bg-opacity-20 hover:bg-blue-500 p-2 rounded cursor-pointer transition-all duration-300">All Songs</li>
+                    <li class="hover:bg-opacity-20 hover:bg-blue-500 p-2 rounded cursor-pointer transition-all duration-300">Favorites</li>
+                    <li class="hover:bg-opacity-20 hover:bg-blue-500 p-2 rounded cursor-pointer transition-all duration-300">Playlists</li>
+                    <li class="hover:bg-opacity-20 hover:bg-blue-500 p-2 rounded cursor-pointer transition-all duration-300">Genres</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-auto">
+            <div class="p-6">
+                <h1 class="text-3xl font-bold mb-6 neon-text">Retro Music Player</h1>
+                
+                <!-- Music Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="music-grid">
+                    <!-- Music cards will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar fixed bottom-0 left-0 right-0 p-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Now Playing -->
+            <div class="now-playing flex items-center space-x-4">
+                <img src="https://via.placeholder.com/60" alt="Now Playing" class="w-12 h-12 rounded">
+                <div>
+                    <h4 class="font-semibold">Now Playing</h4>
+                    <p class="text-sm text-blue-300">Artist Name</p>
+                </div>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="flex-1 max-w-2xl mx-8">
+                <div class="flex items-center justify-center space-x-6 mb-2">
+                    <button class="player-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                    <button class="player-btn text-2xl" id="play-btn"><i class="fas fa-play"></i></button>
+                    <button class="player-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm text-blue-300" id="current-time">0:00</span>
+                    <div class="progress-bar flex-1 rounded-full cursor-pointer">
+                        <div class="progress h-full rounded-full w-0"></div>
+                    </div>
+                    <span class="text-sm text-blue-300" id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-volume-up text-blue-300"></i>
+                <div class="volume-slider w-24 rounded-full cursor-pointer">
+                    <div class="volume-progress h-full rounded-full w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
