@@ -29,28 +29,28 @@ const musicData = [
         audio: "assets/music/song4.mp3"
     },
     {
-        id: 4,
+        id: 5,
         title: "Bi Ehsas",
         artist: "Shadmehr Aghili",
         cover: "assets/images/cover5.jpg",
         audio: "assets/music/song5.mp3"
     },
     {
-        id: 4,
+        id: 6,
         title: "Dast Man Nist",
         artist: "Shadmehr Aghili",
         cover: "assets/images/cover6.jpg",
         audio: "assets/music/song6.mp3"
     },
     {
-        id: 4,
+        id: 7,
         title: "Harigh Sabz",
         artist: "Ebi",
         cover: "assets/images/cover7.jpg",
         audio: "assets/music/song7.mp3"
     },
     {
-        id: 4,
+        id: 8,
         title: "Pichak",
         artist: "Ebi",
         cover: "assets/images/cover8.jpg",
